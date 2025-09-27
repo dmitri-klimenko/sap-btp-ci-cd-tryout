@@ -1,0 +1,10 @@
+applications:
+- name: devops-lifecycle-demo
+  memory: 64M
+  instances: 1
+  buildpacks:
+    - nodejs_buildpack
+  env:
+    NODE_ENV: production
+    LOG_LEVEL: info
+  stack: cflinuxfs4

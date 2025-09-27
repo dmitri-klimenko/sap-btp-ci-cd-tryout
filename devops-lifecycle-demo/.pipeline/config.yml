@@ -1,0 +1,26 @@
+general:
+  pipeline: 'sap-cloud-sdk'
+
+defaults:
+  projectPath: 'devops-lifecycle-demo'
+    
+stages:
+  Build:
+    npmExecuteScripts: true
+    
+  Additional Unit Tests:
+    npmExecuteScripts: true
+    testResultsFiles: 'test-results.xml'
+    
+  Lint:
+    npmExecuteLint: true
+    
+  Deploy to Cloud Foundry:
+    cfDeploy: true
+    cloudFoundry:
+      apiEndpoint: 'https://api.cf.us10-001.hana.ondemand.com'
+      org: 'cf6c764ftrial'
+      space: 'dev'
+      appName: 'devops-lifecycle-demo'
+      manifest: 'manifest.yml'
+      credentialsId: 'cf-credentials'
