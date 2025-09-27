@@ -1,8 +1,5 @@
 general:
   pipeline: 'sap-cloud-sdk'
-
-defaults:
-  projectPath: 'devops-lifecycle-demo'
     
 stages:
   Build:
@@ -21,6 +18,6 @@ stages:
       apiEndpoint: 'https://api.cf.us10-001.hana.ondemand.com'
       org: 'cf6c764ftrial'
       space: 'dev'
-      appName: 'devops-lifecycle-demo'
+      appName: 'sap-btp-devops-lifecycle'
       manifest: 'manifest.yml'
       credentialsId: 'cf-credentials'

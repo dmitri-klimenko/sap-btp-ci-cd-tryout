@@ -1,5 +1,5 @@
 {
-  "name": "devops-lifecycle-demo",
+  "name": "sap-btp-devops-lifecycle",
   "version": "1.0.0",
   "description": "SAP BTP DevOps Lifecycle Demonstration",
   "main": "app.js",
