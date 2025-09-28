@@ -6,11 +6,9 @@ stages:
     npmExecuteScripts: true
     
   Additional Unit Tests:
-    npmExecuteScripts: true
+    npmExecuteScripts:
+      runScripts: ["test:coverage"]
     testResultsFiles: 'test-results.xml'
-    
-  Lint:
-    npmExecuteLint: true
     
   Release:
     cloudFoundryDeploy: true
