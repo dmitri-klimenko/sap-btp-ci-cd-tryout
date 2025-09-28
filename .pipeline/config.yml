@@ -12,12 +12,12 @@ stages:
   Lint:
     npmExecuteLint: true
     
-  Deploy to Cloud Foundry:
-    cfDeploy: true
+  Release:
+    cloudFoundryDeploy: true
+    mtaBuild: true
+    mtaDeploy: true
     cloudFoundry:
       apiEndpoint: 'https://api.cf.us10-001.hana.ondemand.com'
       org: '7e3bbfebtrial'
       space: 'dev'
-      appName: 'sap-btp-devops-lifecycle'
-      manifest: 'manifest.yml'
       credentialsId: 'cf-credentials'
