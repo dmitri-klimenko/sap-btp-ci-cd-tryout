@@ -1,21 +1,45 @@
 general:
   pipeline: 'sap-cloud-sdk'
-    
+
 stages:
   Build:
     npmExecuteScripts: true
-    
+    mtaBuild: true
+    stashContent: [ "mta" ]
+
   Additional Unit Tests:
     npmExecuteScripts: true
     runScripts: ["test"]
     testResultsFiles: 'test-results.xml'
-    
-  Release:
+
+  Deploy to Dev:
     cloudFoundryDeploy: true
-    mtaBuild: true
     mtaDeploy: true
     cloudFoundry:
       apiEndpoint: 'https://api.cf.us10-001.hana.ondemand.com'
       org: '7e3bbfebtrial'
       space: 'dev'
       credentialsId: 'cf-credentials'
+    unstashContent: [ "mta" ]
+
+  Deploy to Stage:
+    manualConfirmation: true
+    cloudFoundryDeploy: true
+    mtaDeploy: true
+    cloudFoundry:
+      apiEndpoint: 'https://api.cf.us10-001.hana.ondemand.com'
+      org: '7e3bbfebtrial'
+      space: 'stage'
+      credentialsId: 'cf-credentials'
+    unstashContent: [ "mta" ]
+
+  Deploy to Prod:
+    manualConfirmation: true
+    cloudFoundryDeploy: true
+    mtaDeploy: true
+    cloudFoundry:
+      apiEndpoint: 'https://api.cf.us10-001.hana.ondemand.com'
+      org: '7e3bbfebtrial'
+      space: 'prod'
+      credentialsId: 'cf-credentials'
+    unstashContent: [ "mta" ]
