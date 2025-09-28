@@ -8,8 +8,7 @@ describe('DevOps Lifecycle Demo API', () => {
     // Close any open handles
     await new Promise(resolve => setImmediate(resolve));
   });
-  
-  
+
   test('GET / should return app info', async () => {
     const response = await request(app)
       .get('/')
