@@ -7,8 +7,8 @@ stages:
     
   Additional Unit Tests:
     npmExecuteScripts:
-      runScripts: ["test:coverage"]
-    testResultsFiles: 'test-results.xml'
+      runScripts: ["test"]
+      testResultsFiles: 'test-results.xml'
     
   Release:
     cloudFoundryDeploy: true
