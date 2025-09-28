@@ -9,6 +9,7 @@ describe('DevOps Lifecycle Demo API', () => {
     await new Promise(resolve => setImmediate(resolve));
   });
   
+  
   test('GET / should return app info', async () => {
     const response = await request(app)
       .get('/')
