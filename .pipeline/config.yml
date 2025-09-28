@@ -17,5 +17,5 @@ stages:
     cloudFoundry:
       apiEndpoint: 'https://api.cf.us10-001.hana.ondemand.com'
       org: '7e3bbfebtrial'
-      space: 'dev'
+      space: '${CF_SPACE}'
       credentialsId: 'cf-credentials'
