@@ -6,9 +6,9 @@ stages:
     npmExecuteScripts: true
     
   Additional Unit Tests:
-    npmExecuteScripts:
-      runScripts: ["test"]
-      testResultsFiles: 'test-results.xml'
+    npmExecuteScripts: true
+    runScripts: ["test"]
+    testResultsFiles: 'test-results.xml'
     
   Release:
     cloudFoundryDeploy: true
