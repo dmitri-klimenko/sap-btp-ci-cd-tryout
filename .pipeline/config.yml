@@ -16,7 +16,7 @@ stages:
     cfDeploy: true
     cloudFoundry:
       apiEndpoint: 'https://api.cf.us10-001.hana.ondemand.com'
-      org: 'cf6c764ftrial'
+      org: '7e3bbfebtrial'
       space: 'dev'
       appName: 'sap-btp-devops-lifecycle'
       manifest: 'manifest.yml'
