@@ -1,6 +1,7 @@
 applications:
 - name: sap-btp-devops-lifecycle
-  memory: 64M
+  memory: 512M
+  disk_quota: 1024M
   instances: 1
   buildpacks:
     - nodejs_buildpack
