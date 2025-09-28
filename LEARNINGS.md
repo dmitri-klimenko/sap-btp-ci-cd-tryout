@@ -13,6 +13,18 @@ cf api https://api.cf.us10-001.hana.ondemand.com  # Point to your region
 cf login                                          # Get authenticated
 cf apps                                          # See what's running
 cf push --random-route                           # Deploy without route conflicts
+cf buildpacks                    # See what buildpacks are available
+cf stacks                        # Check available stacks (cflinuxfs4 is common)
+cf space dev                     # Get details about your space and quotas
+cf quota {quota-name}            # Check your quota limitations (very important!)
+
+cf app {app-name}                # Detailed info about a specific app
+cf logs {app-name}               # Stream live logs (lifesaver for debugging)
+cf logs {app-name} --recent      # Get recent logs without streaming
+cf restart {app-name}            # Restart your app
+cf stop {app-name}               # Stop an app
+cf start {app-name}              # Start a stopped app
+cf delete {app-name}             # Remove an app completely
 ```
 
 
